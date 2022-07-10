@@ -1,14 +1,14 @@
 ---
 const {active } = Astro.props
 
-let hover = " group-hover:fill-[#323232] dark:group-hover:fill-white transition-all ease-in-out duration-300 ";
 let path = "/explore"
+let hover = " group-hover:fill-kuro-700 dark:group-hover:fill-white transition-all ease-in-out duration-300 ";
 function activeHighlight(path) {
-  return (active == path) ? "fill-[#323232] dark:fill-white" : "fill-[#d3d3e0] dark:fill-[#6A6A84]";
+  return (active == path) ? "fill-kuro-700 dark:fill-white" : "fill-kuro-300 dark:fill-kuro-500";
 }
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer group w-8 h-8" viewBox="0 0 16 16" >
+<svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer group w-6 h-6" viewBox="0 0 16 16" >
   <path 
     class={activeHighlight(path) + hover} 
     d="M10.2291 3.86547L8.73291 4.98759L10.2291 6.85778L11.3512 6.1097L10.2291 3.86547Z"
@@ -22,7 +22,7 @@ function activeHighlight(path) {
     x="6.52734" y="9.38985" width="1.65648" height="0.993234" 
     transform="rotate(-25.5617 6.52734 9.38985)"
   />
-  <path class="fill-[#757575] dark:fill-[#bdbdbd]"  fill-rule="evenodd" clip-rule="evenodd" 
+  <path class="fill-kuro-500 dark:fill-kuro-300"  fill-rule="evenodd" clip-rule="evenodd" 
     d="M8.33395 9.5138C8.45485 9.45573 8.59255 9.44289 8.7221 9.47761C8.85165 9.51234 8.96448 9.59232 9.04014 
     9.70306L11.0181 12.5936C11.1021 12.7164 11.1339 12.8676 11.1064 13.0139C11.079 13.1601 10.9946 13.2895 
     10.8718 13.3735C10.749 13.4575 10.5978 13.4893 10.4516 13.4619C10.3053 13.4345 10.176 13.3501 10.0919 
