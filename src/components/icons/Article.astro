@@ -1,14 +1,14 @@
 ---
 const {active } = Astro.props
 
-let hover = " group-hover:fill-[#323232] dark:group-hover:fill-white transition-all ease-in-out duration-300 ";
 let path = "/articles"
+let hover = " group-hover:fill-kuro-700 dark:group-hover:fill-white transition-all ease-in-out duration-300 ";
 function activeHighlight(path) {
-  return (active == path) ? "fill-[#323232] dark:fill-white" : "fill-[#d3d3e0] dark:fill-[#6A6A84]";
+  return (active == path) ? "fill-kuro-700 dark:fill-white" : "fill-kuro-300 dark:fill-kuro-500";
 }
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer group w-8 h-8" viewBox="0 0 1024 1024">
+<svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer group w-6 h-6" viewBox="0 0 1024 1024">
   <rect 
     class={activeHighlight(path) + hover} 
     x="91" y="275" width="759" height="493"
