@@ -1,0 +1,16 @@
+---
+import Article from './Article.astro'
+import Exlpore from './Explore.astro'
+import Project from './Project.astro'
+let {icon, active} = Astro.props
+---
+
+{
+  (icon === 'article') && <Article active={active} />
+}
+{
+  (icon === 'project') && <Project active={active} />
+}
+{
+  (icon === 'explore') && <Exlpore active={active} />
+}
